@@ -1,0 +1,40 @@
+#block-views-block-clients-block-1{
+  @extend %container;
+  margin-top: 30px;
+  margin-bottom: 100px;
+  .block-title{
+    @include title();
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 70px;
+    &:before, &:after{
+      background-color: $grey;
+      content: '';
+      display: inline-block;
+      height: 1px;
+      position: relative;
+      vertical-align: middle;
+      width: 50%;
+    }
+    &::before{
+      right: 0.5em;
+      margin-left: -50%;
+    }
+    &::after{
+      left: 0.5em;
+      margin-right: -50%;
+    }
+  }
+  img{
+    margin: 0 auto;
+    height: 107px;
+    object-fit: contain;
+    object-position: center;
+  }
+  @media (max-width: 1330px) {
+    .block-title {
+      width: 95%;
+    }
+  }
+}
+

@@ -1,0 +1,301 @@
+#block-views-block-news-block-1 {
+  >.form-group{
+    background: repeating-linear-gradient(-45deg, $grey, $grey 10%, transparent 10%, transparent 50%);
+    background-size: 8px 8px;
+  }
+  .block-title {
+    @extend %container;
+    padding: 65px 0 20px;
+    @include title();
+    overflow: hidden;
+    &:before, &:after {
+      background-color: $grey;
+      content: '';
+      display: inline-block;
+      height: 1px;
+      position: relative;
+      vertical-align: middle;
+      width: 50%;
+    }
+    &::before {
+      right: 0.5em;
+      margin-left: -50%;
+    }
+    &::after {
+      left: 0.5em;
+      margin-right: -50%;
+    }
+  }
+  .contextual-region {
+    @extend %container;
+  }
+  .view-id-news{
+    @extend %container;
+  }
+  .form-inline{
+    padding: 12px 0;
+  }
+  #edit-submit-news{
+    margin: 0;
+  }
+  .view-content {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    padding-bottom: 70px;
+  }
+  .views-row {
+    display: flex;
+    flex-direction: row;
+    background-color: $white;
+    max-width: 610px;
+    padding-bottom: 15px;
+    width: 100%;
+    img{
+      width: 78px;
+      height: 78px;
+      max-width: none;
+    }
+  }
+  .views-field-fieldset-2 {
+    display: flex;
+    flex-direction: row;
+  }
+  .user-fieldset {
+    display: flex;
+    flex-direction: row;
+  }
+  .date-fieldset {
+    text-align: center;
+    margin-top: 15px;
+    padding: 0 20px;
+    .views-field-created {
+      font-size: 24px;
+      text-transform: uppercase;
+    }
+    .views-field-created-1 {
+      color: $blue;
+      font-size: 42px;
+      font-weight: 700;
+      line-height: 25px;
+    }
+    .views-field-created-2 {
+      margin-top: 5px;
+      color: $grey;
+    }
+  }
+  .content-fieldset {
+    margin-top: 23px;
+    margin-left: 20px;
+    }
+  .views-field-fieldset-2 {
+    .field-content{
+      width: 100%;
+    }
+    .user-fieldset {
+      width: 100%;
+      &:before {
+        content: '';
+        position: relative;
+        display: block;
+        min-height: 100%;
+        width: 1px;
+        background-color: $grey;
+        transform: translate(-20px, 0px);
+      }
+    }
+    .views-field-roles-target-id {
+      font-size: 12px;
+      padding-left: 10px;
+      margin-right: 3px;
+      color: $grey;
+      text-transform: uppercase;
+    }
+  }
+  .views-field-name{
+    font-size: 12px;
+    a{
+      color: $dark-blue;
+      text-decoration: none;
+      text-transform: uppercase;
+      &:after{
+        content: ' /';
+      }
+    }
+  }
+  .views-field-field-position{
+    margin-left: 4px;
+    text-transform: uppercase;
+    font-size: 12px;
+    a{
+      text-decoration: none;
+    }
+  }
+  .views-field-created-3{
+    font-size: 12px;
+    padding-right: 10px;
+    margin-left: auto;
+    text-transform: uppercase;
+    color: $grey;
+  }
+  .article-fieldset{
+    margin-top: 20px;
+    border-left: 1px solid $grey;
+    margin-left: -20px;
+    padding-left: 20px;
+    .views-field-title{
+      text-transform: uppercase;
+      font-size: 22px;
+      margin-bottom: 5px;
+      a{
+        color: $dark-blue;
+        text-decoration: none;
+      }
+    }
+    .views-field-body{
+      text-transform: uppercase;
+      color: $semi-black;
+      letter-spacing: -1px;
+      line-height: 15px;
+      max-width: 478px;
+      margin: 0 auto;
+    }
+    .views-field-view-node{
+      text-align: end;
+      margin: 15px 0 0;
+      @include button_hover();
+      span{
+        text-transform: uppercase;
+        background-color: #373645;
+        padding: 7px 9px;
+        a{
+          color: $white;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+#block-views-block-news-block-1{
+  @media (max-width: 1330px) {
+    .block-title {
+      width: 95%;
+    }
+  }
+  @media (max-width: 1290px) {
+    .view-content{
+      flex-direction: column;
+      padding-bottom: 10px;
+    }
+    .views-row{
+      margin: 0 auto 25px;
+    }
+    .form-inline{
+      display: flex;
+      flex-direction: row;
+      padding: 12px 15px;
+      max-width: 351px;
+      margin: 0 auto;
+    }
+  }
+  @media (max-width: 650px) {
+    .views-row{
+      width: 95%;
+      position: relative;
+      padding: 0;
+      .field-content{
+        padding-right: 10px;
+      }
+      .views-field-view-node{
+        text-align: center;
+      }
+      .views-field-name{
+        text-align: center;
+        a:after{
+          content: none;
+        }
+      }
+      .views-field-field-position{
+        text-align: center;
+      }
+      .views-field-created-3{
+        text-align: center;
+        padding-left: 3px;
+      }
+      .user-fieldset{
+        position: relative;
+        &:before{
+          display: none;
+        }
+        .field-content{
+          padding: 0;
+        }
+      }
+      .article-fieldset{
+        border: none;
+        padding-bottom: 20px;
+      }
+      .views-field-name{
+        position: absolute;
+        margin-top: 24px;
+        margin-left: 87px;
+      }
+      .views-field-field-position{
+        position: absolute;
+        margin-left: 87px;
+        margin-top: 47px;
+        .field-content{
+          max-width: 140px;
+          text-align: start;
+        }
+      }
+      .views-field-created-3{
+        position: absolute;
+        margin-top: 80px;
+        margin-left: 2px;
+      }
+      .views-field-title{
+        text-align: center;
+      }
+      .views-field-body{
+        text-align: center;
+      }
+      .date-fieldset{
+        position: absolute;
+        right: 0;
+        margin-top: 20px;
+        .views-field-created{
+          font-size: 18px;
+        }
+        .views-field-created-1{
+          font-size: 34px;
+          line-height: 16px;
+        }
+      }
+      .article-fieldset{
+        padding-left: 10px;
+        .views-field-title{
+          line-height: 28px;
+          font-size: 20px;
+          margin-top: 5px;
+        }
+        .views-field-body{
+          .field-content{
+            padding: 0;
+          }
+        }
+      }
+      .views-field-fieldset{
+        width: 0;
+      }
+      .views-field-fieldset-1{
+        width: 100%;
+      }
+      .views-field-fieldset-3{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      }
+    }
+  }
+}

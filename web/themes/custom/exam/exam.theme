@@ -1,0 +1,4 @@
+<?php
+function exam_form_search_block_form_alter(&$form, &$form_state) {
+  $form['keys']['#title'] = t("");
+}

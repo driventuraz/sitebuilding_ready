@@ -1,0 +1,176 @@
+#block-aboutlines{
+  @extend %container;
+  display: flex;
+  flex-direction: row;
+  border-top: 5px solid $dark-blue;
+  border-bottom: 5px solid $blue;
+  padding: 5px 0;
+  margin-top: 80px;
+  .field--name-field-about-title{
+    font-size: 26px;
+    color: $dark-blue;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  .field--name-body{
+    color: $grey;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 18px;
+    margin: 0 auto;
+    padding-top: 7px;
+  }
+  .field--name-field-about-link{
+    margin: auto 0;
+    height: 30px;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    background-color: $blue;
+    @include button_hover();
+    a{
+      color: white;
+      display: block;
+      width: 100%;
+      line-height: 30px;
+      height: 100%;
+      padding: 0 7px;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+}
+#block-views-block-services-block-1{
+  @extend %container;
+  display: flex;
+  flex-direction: column;
+  margin: 95px auto 0;
+  .block-title{
+    @include title();
+    width: 100%;
+    overflow: hidden;
+    &:before, &:after{
+      background-color: $grey;
+      content: '';
+      display: inline-block;
+      height: 1px;
+      position: relative;
+      vertical-align: middle;
+      width: 50%;
+    }
+    &::before{
+      right: 0.5em;
+      margin-left: -50%;
+    }
+    &::after{
+      left: 0.5em;
+      margin-right: -50%;
+    }
+  }
+  .view-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 100px;
+  }
+  .field-content.services-body{
+    max-width: 255px;
+  }
+  .views-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    img{
+      height: 121px;
+    }
+  }
+  .views-field.views-field-title{
+    text-transform: uppercase;
+    color: $dark-blue;
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  .views-field.views-field-body{
+    color: $grey;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: -0.8px;
+    margin-top: 15px;
+  }
+  .views-field.views-field-view-node{
+    padding: 6px;
+    text-transform: uppercase;
+    background-color: $blue;
+    margin-top: 20px;
+    @include button_hover();
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+#block-aboutlines{
+  @media (max-width: 1330px) {
+    width: 95%;
+    .field--name-field-about-link{
+      min-width: 118px;
+      margin-left: 15px;
+    }
+    .field--name-field-about-title{
+      margin: auto 15px auto 0;
+    }
+    .field--name-body{
+      text-align: center;
+    }
+  }
+  @media (max-width: 668px) {
+    .field--name-body{
+      font-size: 16px;
+    }
+    .field--name-field-about-title{
+      font-size: 24px;
+    }
+  }
+  @media (max-width: 570px) {
+    flex-direction: column;
+    .field--name-field-about-link{
+    max-width: 118px;
+    margin: 0 auto;
+    }
+    .field--name-field-about-title{
+      text-align: center;
+    }
+    .field--name-body{
+      padding: 7px 0;
+    }
+  }
+}
+#block-views-block-services-block-1{
+  @media (max-width: 1330px) {
+    .block-title{
+      width: 95%;
+    }
+  }
+  .view-content{
+    @media (max-width: 1120px){
+      width: 97%;
+      margin: 100px auto 0;
+    }
+    @media (max-width: 1060px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      .views-row{
+        padding-bottom: 40px;
+      }
+    }
+    @media (max-width: 565px) {
+      grid-template-columns: 1fr;
+      margin: 50px auto 0;
+      .views-row:last-child{
+        padding-bottom: 0;
+      }
+    }
+  }
+}

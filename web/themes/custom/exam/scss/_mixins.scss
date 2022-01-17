@@ -1,0 +1,20 @@
+%container{
+  max-width: 1250px;
+  width: 100%;
+  margin: 0 auto;
+}
+@mixin title(){
+  margin: 0 auto;
+  color: $dark-blue;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 26px;
+  position: relative;
+  text-align: center;
+}
+@mixin button_hover(){
+  transition: 0.4s;
+  &:hover{
+    opacity: 0.7;
+  }
+}

@@ -1,0 +1,50 @@
+.footer{
+  background-color: $dark-blue;
+  margin: 0;
+  padding: 0;
+  border: none;
+  .region-footer {
+    .slick-track{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    @extend %container;
+    display: flex;
+    flex-direction: row;
+    padding: 70px 20px 35px;
+    #block-logo-2{
+      max-width: 163px;
+    }
+    .field--name-field-quarantie{
+      text-align: center;
+      padding: 0;
+    }
+    .field--name-field-software{
+      text-align: start;
+      padding: 0;
+    }
+    #block-headerlinks-2{
+      margin: auto 0 auto auto;
+    }
+  }
+  @media (max-width: 512px) {
+    .region-footer{
+      padding: 45px 20px 35px;
+    }
+  }
+  @media (max-width: 380px) {
+    .region-footer{
+      display: flex;
+      flex-direction: column;
+    #block-headerlinks-2 {
+      margin: 15px auto 0;
+    }
+    }
+    #block-logo-2{
+      font-size: 26px;
+      margin: 0 auto
+    }
+
+  }
+}

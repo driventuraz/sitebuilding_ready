@@ -1,0 +1,121 @@
+#block-views-block-team-block-1{
+  @extend %container;
+  display: flex;
+  flex-direction: column;
+   .block-title{
+     padding: 65px 0 20px;
+     @include title();
+     width: 100%;
+     background-color: $white;
+     overflow: hidden;
+     &:before, &:after {
+       max-width: 541px;
+       background-color: $grey;
+       content: '';
+       display: inline-block;
+       height: 1px;
+       position: relative;
+       vertical-align: middle;
+       width: 50%;
+     }
+     &::before {
+       right: 0.5em;
+       margin-left: -50%;
+     }
+     &::after {
+       left: 0.5em;
+       margin-right: -50%;
+     }
+   }
+  .view-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+      img{
+        filter: grayscale(100%);
+        transition: 0.4s;
+      }
+  }
+  .views-row{
+    text-align: center;
+    &:hover{
+      img{
+        filter: none;
+      }
+    }
+  }
+  .views-field-name{
+    text-transform: uppercase;
+    color: $dark-blue;
+    font-size: 22px;
+    padding-top: 15px;
+    a{
+      color: $dark-blue;
+      text-decoration: none;
+    }
+  }
+  .views-field-field-position{
+    color: #cccccc;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    line-height: 12px;
+    a {
+      color: #cccccc;
+      text-decoration: none;
+    }
+  }
+  .views-field-link-flag{
+    display: inline-block;
+  }
+  .views-field-view-user{
+    margin-top: 15px;
+    .field-content{
+      text-transform: uppercase;
+      background-color: #373645;
+      padding: 7px 9px;
+      @include button_hover();
+    }
+    a{
+      color: $white;
+      text-decoration: none;
+    }
+  }
+  .views-field-field-social{
+    font-size: 22px;
+    margin-top: 20px;
+    margin-right: 66px;
+  }
+  .views-field-link-flag{
+    margin-top: 20px;
+    a {
+      color: $grey;
+    }
+  }
+}
+#block-views-block-team-block-1{
+  @media (max-width: 1330px) {
+    .block-title {
+      width: 95%;
+    }
+  }
+  @media (max-width: 1305px) {
+    .view-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .views-row{
+      margin: 35px auto 0;
+    }
+  }
+  @media (max-width: 658px) {
+    .view-content{
+      grid-template-columns: 1fr;
+    }
+    .views-row{
+      img{
+        max-width: 95%;
+        margin: 0 auto;
+      }
+    }
+  }
+}

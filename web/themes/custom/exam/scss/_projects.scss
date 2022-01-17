@@ -1,0 +1,127 @@
+#block-views-block-projects-block-1 {
+  .form-group{
+    background: repeating-linear-gradient(-45deg, $grey, $grey 10%, transparent 10%, transparent 50%);
+    background-size: 8px 8px;
+  }
+  .block-title{
+    @extend %container;
+    padding: 65px 0 20px;
+    @include title();
+    background-color: $white;
+    overflow: hidden;
+    &:before, &:after {
+      background-color: $grey;
+      content: '';
+      display: inline-block;
+      height: 1px;
+      position: relative;
+      vertical-align: middle;
+      width: 50%;
+    }
+    &::before {
+      right: 0.5em;
+      margin-left: -50%;
+    }
+    &::after {
+      left: 0.5em;
+      margin-right: -50%;
+    }
+  }
+  .view-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    @extend %container;
+  }
+  .views-row{
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 2px solid $dark-blue;
+  }
+  .views-field-title{
+    text-transform: uppercase;
+    color: $dark-blue;
+    font-size: 24px;
+    padding-top: 20px;
+    a{
+      color: $dark-blue;
+      text-decoration: none;
+    }
+  }
+  .views-field-field-development{
+    font-size: 16px;
+    text-transform: uppercase;
+    padding-top: 13px;
+    a{
+      text-decoration: none;
+    }
+    [href="/app_development"]{
+      color: #1bbc9b;
+    }
+    [href="/drupal_project"]{
+      color: #9b58b5;
+    }
+    [href="/php_development"]{
+      color: #e84c3d;
+    }
+    [href="/web_development"]{
+      color: #32ade1;
+    }
+  }
+  .views-field-view-node{
+    text-transform: uppercase;
+    background-color: $dark-blue;
+    margin: 13px 0 10px;
+    padding: 7px 9px;
+    @include button_hover();
+    a{
+      color: $white;
+      text-decoration: none;
+    }
+  }
+  .js-pager__items{
+    li > a{
+      background: none;
+      border: none;
+      color: $dark-grey;
+      margin: 9px 3px;
+      padding: 3px 9px;
+    }
+    .is-active a{
+      border: 1px solid $border-grey;
+      background-color: $border-grey;
+      border-radius: 50%;
+    }
+  }
+  .pagination{
+    margin: 35px 0 50px;
+  }
+}
+#block-views-block-projects-block-1{
+  @media (max-width: 1330px) {
+    .block-title {
+      width: 95%;
+    }
+  }
+  @media (max-width: 1310px) {
+    .view-content{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .views-row{
+      max-width: 290px;
+      margin: 30px auto;
+    }
+  }
+  @media (max-width: 670px) {
+    .view-content{
+      grid-template-columns: 1fr;
+      margin: 20px auto;
+    }
+    .pagination{
+      margin: 0 auto 20px;
+    }
+  }
+}
